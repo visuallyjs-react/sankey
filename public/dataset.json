@@ -1,0 +1,322 @@
+{
+  "nodes": [
+    {
+      "id": "S1",
+      "name": "Silicon Chipsets (TSMC)",
+      "type": "supplier"
+    },
+    {
+      "id": "S2",
+      "name": "OLED Panels (Samsung)",
+      "type": "supplier"
+    },
+    {
+      "id": "S3",
+      "name": "Lithium Batteries",
+      "type": "supplier"
+    },
+    {
+      "id": "P1",
+      "name": "Assembly Plant - Shenzhen",
+      "type": "factory"
+    },
+    {
+      "id": "P2",
+      "name": "Assembly Plant - Vietnam",
+      "type": "factory"
+    },
+    {
+      "id": "H1",
+      "name": "Western US RDC",
+      "type": "distribution-center"
+    },
+    {
+      "id": "H2",
+      "name": "Eastern US RDC",
+      "type": "distribution-center"
+    },
+    {
+      "id": "H3",
+      "name": "Logistics Cross-Dock",
+      "type": "cross-dock"
+    },
+    {
+      "id": "D1",
+      "name": "Direct Fulfillment (Online)",
+      "type": "fulfillment-center"
+    },
+    {
+      "id": "D2",
+      "name": "Retail Store - NYC",
+      "type": "retail-store"
+    },
+    {
+      "id": "D3",
+      "name": "Retail Store - LA",
+      "type": "retail-store"
+    },
+    {
+      "id": "D4",
+      "name": "Wholesale Partner (BestBuy)",
+      "type": "wholesale-client"
+    },
+    {
+      "id": "S4",
+      "name": "Camera Modules (Sony)",
+      "type": "supplier"
+    },
+    {
+      "id": "P3",
+      "name": "Assembly Plant - India",
+      "type": "factory"
+    },
+    {
+      "id": "H4",
+      "name": "European RDC",
+      "type": "distribution-center"
+    },
+    {
+      "id": "H5",
+      "name": "Global Logistics Hub",
+      "type": "cross-dock"
+    },
+    {
+      "id": "D5",
+      "name": "European Fulfillment",
+      "type": "fulfillment-center"
+    },
+    {
+      "id": "D6",
+      "name": "Retail Store - London",
+      "type": "retail-store"
+    },
+    {
+      "id": "D7",
+      "name": "Wholesale Partner (Amazon)",
+      "type": "wholesale-client"
+    }
+  ],
+  "edges": [
+    {
+      "source": "S1",
+      "target": "P1",
+      "data": {
+        "value": 500,
+        "label": "Chips",
+        "transitMode": "Air",
+        "carrier": "FedEx"
+      }
+    },
+    {
+      "source": "S1",
+      "target": "P2",
+      "data": {
+        "value": 300,
+        "label": "Chips",
+        "transitMode": "Air",
+        "carrier": "FedEx"
+      }
+    },
+    {
+      "source": "S1",
+      "target": "P3",
+      "data": {
+        "value": 250,
+        "label": "Chips",
+        "transitMode": "Air",
+        "carrier": "FedEx"
+      }
+    },
+    {
+      "source": "S2",
+      "target": "P1",
+      "data": {
+        "value": 450,
+        "label": "Displays",
+        "transitMode": "Sea",
+        "carrier": "Maersk"
+      }
+    },
+    {
+      "source": "S2",
+      "target": "P2",
+      "data": {
+        "value": 450,
+        "label": "Displays",
+        "transitMode": "Air",
+        "carrier": "Maersk"
+      }
+    },
+    {
+      "source": "S3",
+      "target": "P1",
+      "data": {
+        "value": 400,
+        "label": "Batteries",
+        "transitMode": "Sea",
+        "carrier": "Maersk"
+      }
+    },
+    {
+      "source": "S3",
+      "target": "P2",
+      "data": {
+        "value": 200,
+        "label": "Batteries",
+        "transitMode": "Sea",
+        "carrier": "Maersk"
+      }
+    },
+    {
+      "source": "P1",
+      "target": "H1",
+      "data": {
+        "value": 600,
+        "label": "Finished Goods",
+        "transitMode": "Sea",
+        "carrier": "Maersk"
+      }
+    },
+    {
+      "source": "P1",
+      "target": "H2",
+      "data": {
+        "value": 750,
+        "label": "Finished Goods",
+        "transitMode": "Sea",
+        "carrier": "Maersk"
+      }
+    },
+    {
+      "source": "P2",
+      "target": "H1",
+      "data": {
+        "value": 500,
+        "label": "Finished Goods",
+        "transitMode": "Sea",
+        "carrier": "Maersk"
+      }
+    },
+    {
+      "source": "H1",
+      "target": "H3",
+      "data": {
+        "value": 400,
+        "label": "Bulk Transfer",
+        "transitMode": "Road",
+        "carrier": "DHL"
+      }
+    },
+    {
+      "source": "H1",
+      "target": "D3",
+      "data": {
+        "value": 700,
+        "label": "Local Delivery",
+        "transitMode": "Road",
+        "carrier": "DHL"
+      }
+    },
+    {
+      "source": "H2",
+      "target": "D1",
+      "data": {
+        "value": 500,
+        "label": "E-commerce",
+        "transitMode": "Road",
+        "carrier": "UPS"
+      }
+    },
+    {
+      "source": "H2",
+      "target": "D2",
+      "data": {
+        "value": 250,
+        "label": "Store Stock",
+        "transitMode": "Road",
+        "carrier": "UPS"
+      }
+    },
+    {
+      "source": "H3",
+      "target": "D4",
+      "data": {
+        "value": 400,
+        "label": "Partner Inventory",
+        "transitMode": "Road",
+        "carrier": "DHL"
+      }
+    },
+    {
+      "source": "S4",
+      "target": "P1",
+      "data": {
+        "value": 350,
+        "label": "Cameras",
+        "transitMode": "Air",
+        "carrier": "DHL"
+      }
+    },
+    {
+      "source": "S4",
+      "target": "P3",
+      "data": {
+        "value": 450,
+        "label": "Cameras",
+        "transitMode": "Air",
+        "carrier": "DHL"
+      }
+    },
+    {
+      "source": "P3",
+      "target": "H4",
+      "data": {
+        "value": 700,
+        "label": "Finished Goods",
+        "transitMode": "Air",
+        "carrier": "Emirates"
+      }
+    },
+    {
+      "source": "H4",
+      "target": "H5",
+      "data": {
+        "value": 300,
+        "label": "Euro Transfer",
+        "transitMode": "Rail",
+        "carrier": "DB Cargo"
+      }
+    },
+    {
+      "source": "H4",
+      "target": "D5",
+      "data": {
+        "value": 200,
+        "label": "E-commerce EU",
+        "transitMode": "Road",
+        "carrier": "DPD"
+      }
+    },
+    {
+      "source": "H4",
+      "target": "D6",
+      "data": {
+        "value": 200,
+        "label": "Store Stock UK",
+        "transitMode": "Road",
+        "carrier": "DPD"
+      }
+    },
+    {
+      "source": "H5",
+      "target": "D7",
+      "data": {
+        "value": 300,
+        "label": "Global Distribution",
+        "transitMode": "Air",
+        "carrier": "FedEx"
+      }
+    }
+  ],
+  "groups": []
+}

@@ -1,0 +1,13 @@
+@import "@visuallyjs/browser-ui/css/visuallyjs.css";
+@import "sankey.css";
+
+body * {
+    font-family:sans-serif;
+}
+svg {
+    overflow:visible;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+}
